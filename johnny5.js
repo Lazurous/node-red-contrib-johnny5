@@ -59,13 +59,15 @@ function init(RED) {
 		this.address = Number(n.address);
 		this.mode = n.mode;
 		this.arduino = n.arduino;
-		this.nodebot = RED.nodes.getNode(n.board);
-		if (typeof this.nodebot === "object") {
+		this.ioplugin = RED.nodes.getNode(n.board);
+
+		if (typeof this.ioplugin === 'object') {
 			var node = this;
 			connectingStatus(node);
 
 			node.ioplugin.on('ioready', () => {
-				node.comp = new NodeLed[node.mode](node.nodebot.io, {address: node.address});
+				const {io} = node.ioplugin;
+				node.comp = new NodeLed[node.mode](io, {address: node.address});
 				connectedStatus(node);
 
 				node.on('input', function (msg) {
