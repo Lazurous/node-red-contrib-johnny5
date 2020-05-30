@@ -4,7 +4,7 @@ node-red-contrib-johnny5
 A set of input and output nodes for controlling **General Purpose Input and Outputs (GPIOs)** though the use of [Johnny-Five](https://github.com/rwaldron/johnny-five) [I/O Plugins](https://github.com/rwaldron/johnny-five/wiki/IO-Plugins) as well as running **Johnny-Five scripts**!
 
 * Support for NodeJS 12 and serialport 8.
-* Johnny-Five 1.3
+* Johnny-Five 1.4
 
 This is a fork of [monteslu/node-red-contrib-gpio](https://github.com/monteslu/node-red-contrib-gpio)
 
