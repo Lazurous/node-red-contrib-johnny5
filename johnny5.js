@@ -26,6 +26,7 @@ const five = require('johnny-five');
 const vm = require('vm');
 const util = require('util');
 const _ = require('lodash');
+const NodeLed = require('node-led');
 
 function connectingStatus(n) {
 	n.status({fill: 'red', shape: 'ring', text: 'connecting…'});
